@@ -1,3 +1,34 @@
-<h1>
-  {{title}}
-</h1>
+<!--
+@Author: Tushar Agarwal(tusharcoder) <tushar>
+@Date:   2017-01-27T23:20:17+05:30
+@Email:  tamyworld@gmail.com
+@Filename: app.component.html
+@Last modified by:   tushar
+@Last modified time: 2017-01-28T00:39:09+05:30
+-->
+
+
+<button md-raised-button (click)="logout()" *ngIf="logged_in">
+  Logout
+</button>
+<button md-raised-button (click)="googlelogin()" *ngIf="!logged_in">
+  Use My Google Account
+</button>
+<br/>
+<button md-raised-button (click)="facebooklogin()" *ngIf="!logged_in">
+ facebookLogin
+</button>
+<button md-raised-button (click)="githublogin()" *ngIf="!logged_in">
+  githublogin
+</button>
+<br/>
+<div *ngIf="logged_in">
+  <h1>Logged In through {{provider}}</h1>
+  <h2>Photo</h2>
+  <img src="{{user.auth.photoURL}}" alt="{{user.auth.displayName}}"/>
+  <h2>Name</h2>
+  {{user.auth.displayName}}
+  <h2>Email</h2>
+  {{user.auth.email}}
+
+</div>
