@@ -4,7 +4,7 @@
 * @Email:  tamyworld@gmail.com
 * @Filename: app.module.ts
 * @Last modified by:   tushar
-* @Last modified time: 2017-01-28T00:43:28+05:30
+* @Last modified time: 2017-01-28T00:49:44+05:30
 */
 
 
